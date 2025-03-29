@@ -4,6 +4,14 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void movimentoRecursivo(int n, char *mensagem) {
+    if(n > 0) {
+        printf(mensagem);
+        n--;
+        movimentoRecursivo(n, mensagem);
+    }
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -60,12 +68,34 @@ int main() {
         printf("Esquerda\n");
     }
 
+    printf("============================\n\n");
+
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+    printf("Desafio nivel mestre\n");
+    printf("============================\n");
+    
+    casasBispo = 5;
+    char mensagemBispo[] = "Cima, Direita \n";
+    printf("Movimentação do Bispo: \n");
+    movimentoRecursivo(casasBispo, mensagemBispo);
+
+    printf("============================\n");
+
+    casasTorre = 5;
+    char mensagemTorre[] = "Direita\n";
+    printf("Movimentação da Torre: \n");
+    movimentoRecursivo(casasTorre, mensagemTorre);
+
+    printf("============================\n");
+
+    casasRainha = 8;
+    char mensagemRainha[] = "Esquerda\n";
+    printf("Movimentação da Rainha: \n");
+    movimentoRecursivo(casasRainha, mensagemRainha);
 
     return 0;
 }
