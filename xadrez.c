@@ -7,11 +7,11 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    int casasBispo = 5;
-    int casasTorre = 5;
-    int casasRainha = 8;
 
+    // Implementação de Movimentação do Bispo
+    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     printf("Movimentação do Bispo: \n");
+    int casasBispo = 5;
     for (casasBispo; casasBispo > 0; casasBispo--) {
     
         printf("Cima, Direita \n");
@@ -19,7 +19,10 @@ int main() {
 
     printf("============================\n");
 
+    // Implementação de Movimentação da Torre
+    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
     printf("Movimentação da Torre: \n");
+    int casasTorre = 5;
     while (casasTorre > 0)
     {
         printf("Direita\n");
@@ -28,27 +31,34 @@ int main() {
 
     printf("============================\n");
 
+    
+    // Implementação de Movimentação da Rainha
+    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     printf("Movimentação da Rainha: \n");
 
+    int casasRainha = 8;
     do
     {
         printf("Esquerda\n");
         casasRainha--;
     } while (casasRainha > 0);
-    
-    
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("============================\n\n");
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Movimentação do Cavalo: \n");
+    int casasCavaloBaixo = 2;
+    int casasCavaloEsquerda = 1;
+    for(casasCavaloEsquerda; casasCavaloEsquerda > 0; casasCavaloEsquerda--) {
+        while (casasCavaloBaixo > 0)
+        {
+            printf("Baixo\n");
+            casasCavaloBaixo--;
+        }
+        printf("Esquerda\n");
+    }
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
